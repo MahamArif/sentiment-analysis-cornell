@@ -252,7 +252,7 @@ def ConfusionMatrix(y_pred, y_test):
     plt.savefig('/model/confusion_matrix-cornell.png')
 
 # Predicting on the Test dataset.
-y_pred = training_model.predict(X_test)
+y_pred = training_model.predict(X_test_proc)
 
 # Converting prediction to reflect the sentiment predicted.
 y_pred_c = np.where(y_pred>=0.5, 1, 0)
