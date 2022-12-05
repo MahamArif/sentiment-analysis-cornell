@@ -9,6 +9,6 @@ RUN mkdir /model
 
 COPY review_polarity.tar.gz ./review_polarity.tar.gz
 COPY contractions.csv ./contractions.csv
-COPY train.py ./train.py
+COPY train_cnn.py ./train_cnn.py
 
-CMD python -W ignore train.py
+CMD python -W ignore train_cnn.py
