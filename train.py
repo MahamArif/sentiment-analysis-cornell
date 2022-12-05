@@ -4,7 +4,7 @@ import nltk
 from nltk.corpus import stopwords
 import string, re
 from collections import Counter
-
+import seaborn as sns
 import numpy as np # linear algebra
 import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
 import matplotlib.pyplot as plt
@@ -230,7 +230,7 @@ plt.plot(epochs, val_loss, 'r', label='Validation loss')
 plt.title('Training and validation loss')
 plt.legend()
 
-plt.savefig('/model/accuracy-cornell.png')
+plt.savefig('accuracy-cornell.png')
 
 def ConfusionMatrix(y_pred, y_test):
     # Compute and plot the Confusion matrix
@@ -249,7 +249,7 @@ def ConfusionMatrix(y_pred, y_test):
     plt.xlabel("Predicted values", fontdict = {'size':14}, labelpad = 10)
     plt.ylabel("Actual values"   , fontdict = {'size':14}, labelpad = 10)
     plt.title ("Confusion Matrix", fontdict = {'size':18}, pad = 20)
-    plt.savefig('/model/confusion_matrix-cornell.png')
+    plt.savefig('confusion_matrix-cornell.png')
 
 # Predicting on the Test dataset.
 y_pred = training_model.predict(X_test_proc)
