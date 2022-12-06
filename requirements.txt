@@ -1,9 +1,6 @@
 scikit-learn
 pandas
 numpy
-seaborn
-scipy
-gensim
-matplotlib
-nltk
 tensorflow
+tensorflow_hub
+sentencepiece
